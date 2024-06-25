@@ -41,7 +41,7 @@ const Marquee = () => {
       <div className="h-full w-8 bg-gradient-to-l from-background to-transparent absolute right-0 top-0 z-10"/>
 
       {/* Marquee */}
-      {Array(4)
+      {Array(6)
         .fill(0)
         .map((_, i) => (
           <div
