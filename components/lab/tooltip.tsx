@@ -9,7 +9,7 @@ const Tooltip = () => {
   const [closed, setClosed] = useState(true);
 
   return (
-    <div className="flex w-full md:max-w-64 flex-col overflow-hidden rounded-lg border">
+    <div className="flex w-full max-w-64 flex-col overflow-hidden rounded-lg border">
       <div className="flex items-center gap-x-3 rounded-md bg-popover p-3">
         <Avatar className="h-7 w-7 border">
           <AvatarImage src="https://github.com/msafdev.png" alt="@msafdev" />
