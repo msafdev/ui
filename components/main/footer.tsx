@@ -1,20 +1,49 @@
 import Link from "next/link";
 
 const Footer = () => {
-    return (
-        <footer className="flex w-full items-center pad-x py-6">
-            <p className="text-xs md:text-sm text-muted-foreground">
-                Made with ❤️ by{" "}
-                <Link
-                    href="/"
-                    target="_blank"
-                    className="hover:underline text-foreground"
-                >
-                    @msafdev
-                </Link>
-            </p>
-        </footer>
-    );
-}
+  return (
+    <footer className="pad-x flex w-full flex-col items-center justify-center gap-y-4 py-6">
+      <p className="max-w-sm text-center text-xs text-muted-foreground md:text-sm">
+        <code>Made with ❤️ by</code>{" "}
+        <Link
+          href="/"
+          target="_blank"
+          className="font-medium text-foreground hover:underline"
+        >
+          @msafdev
+        </Link>
+      </p>
+
+      {/* Credits */}
+      <p className="max-w-sm text-center text-xs text-muted-foreground md:text-sm">
+        This project uses a lot of inspirations as well as libraries from other
+        creators, including{" "}
+        <Link
+          href={"https://ibelick.com"}
+          target="_blank"
+          className="text-foreground underline-offset-2 hover:underline"
+        >
+          Ibelick
+        </Link>
+        ,{" "}
+        <Link
+          href={"https://magicui.design"}
+          target="_blank"
+          className="text-foreground underline-offset-2 hover:underline"
+        >
+          Magic UI
+        </Link>
+        , and{" "}
+        <Link
+          href={"https://ui.shadcn.com"}
+          target="_blank"
+          className="text-foreground underline-offset-2 hover:underline"
+        >
+          Shadcn
+        </Link>
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

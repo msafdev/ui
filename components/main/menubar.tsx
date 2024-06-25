@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { Menu, Star } from "lucide-react";
 import { Button } from "../ui/button";
-import { Links } from "@/lib/constants";
 import { ModeToggle } from "../theme";
 
 const Menubar = () => {
@@ -28,19 +27,6 @@ const Menubar = () => {
       <div
         className={`absolute left-0 top-0 flex w-screen flex-col items-center justify-center overflow-hidden bg-accent text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
       >
-        <ul className="flex flex-col items-center gap-y-4 p-6">
-          {Links.map((link, index) => (
-            <li
-              key={index}
-              className="text-sm font-medium hover:text-foreground"
-            >
-              <Link href={link.href} onClick={() => setIsOpen(false)}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
         <div className="flex flex-col gap-y-3">
           <ModeToggle variant="mobile" />
           <Button variant={"default"} className="gap-x-3" size={"sm"}>

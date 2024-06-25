@@ -28,7 +28,7 @@ export function ModeToggle({ variant }: { variant?: "mobile" | "desktop" }) {
       className={`relative ${className}`}
     >
       <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute left-3 h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <Moon className="absolute left-2.5 h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span
         className={
           variant === "desktop"

@@ -13,7 +13,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Starter Kit",
+  title: "ui.msaf",
   description: "A starter kit for Next.js with Tailwind CSS and TypeScript, made with ❤️ by @msafdev.",
 };
 
