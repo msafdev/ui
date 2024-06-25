@@ -86,5 +86,6 @@ export const COMPONENTS = [
     name: "WIP",
     slug: "",
     child: WorkInProgress,
+    gridClass: "last-card",
   },
 ];

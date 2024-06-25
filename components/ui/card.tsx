@@ -15,21 +15,23 @@ const Card = ({
 }) => {
   const size: { [key: string]: string } = {
     "regular-card": "row-span-1 col-span-1 aspect-square",
-    "medium-card": "row-span-2 sm:col-span-2 aspect-[1/2] sm:aspect-square",
+    "medium-card": "row-span-2 sm:col-span-2 aspect-[2/3] sm:aspect-square",
+    "last-card":
+      "lg:col-span-full lg:row-span-1 aspect-square lg:aspect-[3/1]",
   };
 
   return (
     <div
-      className={`group relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-xl p-4 border ${size[gridClass]}`}
+      className={`group relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-xl border p-4 ${size[gridClass]}`}
     >
-      <div className="z-50 absolute bottom-0 flex w-full items-center bg-gradient-to-b from-transparent to-accent px-3 pb-2 pt-12 text-accent-foreground">
+      <div className="absolute bottom-0 z-50 flex w-full items-center bg-gradient-to-b from-transparent to-accent px-3 pb-2 pt-12 text-accent-foreground">
         <p className="font-mono text-sm font-medium sm:text-base">{name}</p>
       </div>
       <Button
         variant="secondary"
         size="icon"
         asChild
-        className="z-50 absolute right-3 top-3 h-8 w-8 scale-0 transition-all duration-300 ease-in-out group-hover:scale-100"
+        className="absolute right-3 top-3 z-50 h-8 w-8 scale-0 transition-all duration-300 ease-in-out group-hover:scale-100"
       >
         <Link href={`/components/${slug}`}>
           <MoveRight className="h-4 w-4" />
