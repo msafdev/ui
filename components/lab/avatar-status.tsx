@@ -1,8 +1,42 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+const badgeMotion = {
+  rest: {
+    width: 16,
+    height: 16,
+  },
+  hover: {
+    width: 48,
+    height: 20,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
+const textMotion = {
+  rest: {
+    opacity: 0,
+  },
+  hover: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
 
 const AvatarStatus = () => {
   return (
-    <div className="group relative h-fit w-fit rounded-full border-2 *:cursor-default">
+    <motion.div
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+      className="group/status relative h-fit w-fit cursor-default rounded-full border-2 border-background"
+    >
       <Avatar className="h-12 w-12">
         <AvatarImage
           src="https://github.com/msafdev.png"
@@ -10,12 +44,15 @@ const AvatarStatus = () => {
         />
         <AvatarFallback>MS</AvatarFallback>
       </Avatar>
-      <div className="transform-left absolute bottom-0 left-8 max-h-4 max-w-4 overflow-hidden rounded-full border-2 bg-green-500 text-xs font-medium text-primary-foreground transition-all duration-300 ease-in-out group-hover:-bottom-1 group-hover:h-fit group-hover:max-h-64 group-hover:max-w-64 group-hover:px-2">
-        <span className="text-[10px] opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100">
+      <motion.div
+        variants={badgeMotion}
+        className="transform-left absolute bottom-0 left-8 overflow-hidden rounded-full flex justify-center items-center border-2 border-background bg-green-500 text-xs font-medium text-white"
+      >
+        <motion.span variants={textMotion} className="text-[10px]">
           Online
-        </span>
-      </div>
-    </div>
+        </motion.span>
+      </motion.div>
+    </motion.div>
   );
 };
 

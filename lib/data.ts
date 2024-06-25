@@ -1,14 +1,16 @@
+import { ModalToggle } from "@/components/lab/modal";
 import AvatarStatus from "@/components/lab/avatar-status";
 import LoadingBar from "@/components/lab/loading-bar";
 import LoadingCircle from "@/components/lab/loading-circle";
 import Marquee from "@/components/lab/marquee";
-import { ModalToggle } from "@/components/lab/modal";
 import ShadowButton from "@/components/lab/shadow-button";
 import ShiningBadge from "@/components/lab/shining-badge";
 import StackedAvatar from "@/components/lab/stacked-avatar";
 import Tooltip from "@/components/lab/tooltip";
 import CuratedImage from "@/components/lab/curated-image";
 import WorkInProgress from "@/components/lab/work-in-progress";
+import MoneyWidget from "@/components/lab/money-widget";
+import MenuBar from "@/components/lab/menu-bar";
 
 export const CSS_CONFIG = {
   ["btn-inner-shadow"]: {
@@ -86,7 +88,17 @@ export const COMPONENTS = [
   {
     name: "Curated Image",
     slug: "curated-image",
-    child: CuratedImage
+    child: CuratedImage,
+  },
+  {
+    name: "Money Widget",
+    slug: "money-widget",
+    child: MoneyWidget,
+  },
+  {
+    name: "Menu Bar",
+    slug: "menu-bar",
+    child: MenuBar,
   },
   {
     name: "WIP",

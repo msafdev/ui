@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import { COMPONENTS } from "@/lib/data";
 import { Gem } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,9 +27,11 @@ export default function Home() {
           <Button variant="default" size="sm" className="font-medium font-mono">
             Read the Docs
           </Button>
-          <Button variant="outline" size="sm" className="gap-x-2 font-medium font-mono">
+          <Button variant="outline" size="sm" className="font-medium font-mono">
+            <Link href="https://trakteer.id/msafdev" className="flex items-center gap-x-2">
             <Gem className="h-3 w-3" />
             Donate on Trakteer
+            </Link>
           </Button>
         </div>
       </div>

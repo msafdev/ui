@@ -14,10 +14,6 @@ const profiles = [
     username: "leerob",
     fallback: "LR",
   },
-  {
-    username: "ibelick",
-    fallback: "JT",
-  },
 ];
 
 const StackedAvatar = () => {
@@ -25,12 +21,16 @@ const StackedAvatar = () => {
     <div className="flex items-center gap-x-2">
       <div className="flex items-center -space-x-4">
         {profiles.map((profile, index) => (
-          <Avatar key={index} className="border-2">
+          <Avatar key={index} className="relative cursor-pointer group/avatar hover:z-10 overflow-visible">
             <AvatarImage
               src={`https://github.com/${profile.username}.png`}
               alt="@shadcn"
+              className="rounded-full"
             />
-            <AvatarFallback>{profile.fallback}</AvatarFallback>
+            <AvatarFallback className="rounded-full">{profile.fallback}</AvatarFallback>
+            <code className="absolute text-xs -bottom-5 underline underline-offset-2 left-1/2 -translate-x-1/2 z-10 text-accent-foreground opacity-0 group-hover/avatar:opacity-100 transition-all duration-300 ease-in-out">
+              {profile.username}
+            </code>
           </Avatar>
         ))}
       </div>
