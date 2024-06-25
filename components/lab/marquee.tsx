@@ -36,11 +36,8 @@ const items = [
 const Marquee = () => {
   return (
     <div className="group flex gap-x-4 overflow-hidden p-2">
-      {/* Overlay */}
-      <div className="h-full w-8 bg-gradient-to-r from-background to-transparent absolute left-0 top-0 z-10"/>
-      <div className="h-full w-8 bg-gradient-to-l from-background to-transparent absolute right-0 top-0 z-10"/>
-
-      {/* Marquee */}
+      <div className="absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-background to-transparent" />
+      <div className="absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-background to-transparent" />
       {Array(6)
         .fill(0)
         .map((_, i) => (

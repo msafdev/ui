@@ -84,6 +84,10 @@
     @apply sm:col-span-2 sm:row-span-2
   }
 
+  .transform-left {
+    transform-origin: top left;
+  }
+
   .inner-shadow-btn {
     box-shadow: 0 8px 0 0 hsl(var(--border));
   }

@@ -1,4 +1,7 @@
+import AvatarStatus from "@/components/lab/avatar-status";
+import LoadingCircle from "@/components/lab/loading-circle";
 import Marquee from "@/components/lab/marquee";
+import { ModalToggle } from "@/components/lab/modal";
 import ShadowButton from "@/components/lab/shadow-button";
 import ShiningBadge from "@/components/lab/shining-badge";
 import StackedAvatar from "@/components/lab/stacked-avatar";
@@ -56,6 +59,21 @@ export const COMPONENTS = [
     name: "Marquee",
     slug: "marquee",
     child: Marquee,
+  },
+  {
+    name: "Loading Circle",
+    slug: "loading-circle",
+    child: LoadingCircle,
+  },
+  {
+    name: "Avatar Status",
+    slug: "avatar-status",
+    child: AvatarStatus,
+  },
+  {
+    name: "Modal",
+    slug: "modal",
+    child: ModalToggle,
   },
   {
     name: "WIP",
