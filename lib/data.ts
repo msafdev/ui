@@ -56,11 +56,6 @@ export const COMPONENTS = [
     gridClass: "medium-card",
   },
   {
-    name: "Marquee",
-    slug: "marquee",
-    child: Marquee,
-  },
-  {
     name: "Loading Circle",
     slug: "loading-circle",
     child: LoadingCircle,
@@ -74,6 +69,12 @@ export const COMPONENTS = [
     name: "Modal",
     slug: "modal",
     child: ModalToggle,
+  },
+  {
+    name: "Marquee",
+    slug: "marquee",
+    child: Marquee,
+    gridClass: "medium-card",
   },
   {
     name: "WIP",
