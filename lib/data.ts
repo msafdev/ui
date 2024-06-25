@@ -1,4 +1,5 @@
 import AvatarStatus from "@/components/lab/avatar-status";
+import LoadingBar from "@/components/lab/loading-bar";
 import LoadingCircle from "@/components/lab/loading-circle";
 import Marquee from "@/components/lab/marquee";
 import { ModalToggle } from "@/components/lab/modal";
@@ -75,6 +76,11 @@ export const COMPONENTS = [
     slug: "marquee",
     child: Marquee,
     gridClass: "medium-card",
+  },
+  {
+    name: "Loading Bar",
+    slug: "loading-bar",
+    child: LoadingBar,
   },
   {
     name: "WIP",
