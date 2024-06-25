@@ -37,17 +37,17 @@ const Modal = ({
       className={`fixed left-0 top-0 z-[999] flex h-screen w-screen items-center justify-center bg-black/60 p-3 pr-7 transition-all duration-100 ease-in-out sm:p-6 sm:pr-10 ${show ? "opacity-100" : "pointer-events-none opacity-0 delay-300"}`}
     >
       <div
-        className={`relative flex w-full max-w-lg flex-col divide-y overflow-hidden rounded-md bg-popover text-popover-foreground transition-all duration-300 ease-in-out ${
+        className={`relative border flex w-full max-w-lg flex-col overflow-hidden rounded-lg bg-popover text-popover-foreground transition-all duration-300 ease-in-out ${
           show ? "opacity-100 delay-100" : "opacity-0"
         }`}
       >
         <Button
           variant={"secondary"}
           size={"icon"}
-          className="absolute right-3 top-3 h-8 w-8"
+          className="absolute right-2 top-2 h-7 w-7"
           onClick={closeModal}
         >
-          <X size={24} />
+          <X size={20} />
         </Button>
         <div className="flex flex-col gap-y-3 px-6 py-4 sm:gap-y-4">
           <h3 className="max-w-[90%] text-lg font-semibold">
