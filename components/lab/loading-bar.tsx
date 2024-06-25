@@ -18,8 +18,6 @@ const LoadingBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  console.log(percentage);
-
   return (
     <div className="flex w-full items-center rounded-full overflow-hidden max-w-[90%] border">
       <div

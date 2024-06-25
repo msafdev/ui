@@ -17,7 +17,7 @@ const Card = ({
     "regular-card": "row-span-1 col-span-1 aspect-square",
     "medium-card": "row-span-2 sm:col-span-2 aspect-[2/3] sm:aspect-square",
     "last-card":
-      "lg:col-span-full lg:row-span-1 aspect-square lg:aspect-[3/1]",
+      "sm:col-span-2 row-span-1 aspect-square sm:aspect-[2/1] lg:aspect-auto",
   };
 
   return (

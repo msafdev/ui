@@ -7,6 +7,7 @@ import ShadowButton from "@/components/lab/shadow-button";
 import ShiningBadge from "@/components/lab/shining-badge";
 import StackedAvatar from "@/components/lab/stacked-avatar";
 import Tooltip from "@/components/lab/tooltip";
+import CuratedImage from "@/components/lab/curated-image";
 import WorkInProgress from "@/components/lab/work-in-progress";
 
 export const CSS_CONFIG = {
@@ -81,6 +82,11 @@ export const COMPONENTS = [
     name: "Loading Bar",
     slug: "loading-bar",
     child: LoadingBar,
+  },
+  {
+    name: "Curated Image",
+    slug: "curated-image",
+    child: CuratedImage
   },
   {
     name: "WIP",
