@@ -116,7 +116,7 @@ export const COMPONENTS = [
   },
   {
     name: "WIP",
-    slug: "",
+    slug: "work-in-progress",
     child: WorkInProgress,
     gridClass: "last-card",
   },
