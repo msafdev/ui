@@ -35,7 +35,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="mt-24 grid w-full max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense">
+      <div className="mt-24 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense">
         {COMPONENTS.map((component, index) => (
           <Card
             key={index}
