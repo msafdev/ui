@@ -35,6 +35,7 @@ const Card = ({
       >
         <Link
           href={`https://github.com/msafdev/ui/blob/main/components/lab/${slug}.tsx`}
+          target="_blank"
         >
           <MoveRight className="h-4 w-4" />
         </Link>
