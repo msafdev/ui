@@ -1,4 +1,3 @@
-import { ModalToggle } from "@/components/lab/modal";
 import AvatarStatus from "@/components/lab/avatar-status";
 import LoadingBar from "@/components/lab/loading-bar";
 import LoadingCircle from "@/components/lab/loading-circle";
@@ -11,10 +10,12 @@ import CuratedImage from "@/components/lab/curated-image";
 import WorkInProgress from "@/components/lab/work-in-progress";
 import MoneyWidget from "@/components/lab/money-widget";
 import MenuBar from "@/components/lab/menu-bar";
+import DigitalClock from "@/components/lab/digital-clock";
 
 export const CSS_CONFIG = {
-  ["btn-inner-shadow"]: {
-    "box-shadow": "inset 0 0 0 1px rgba(0, 0, 0, 0.1)",
+  ["shadow-button"]: {
+    "inner-shadow-btn":
+      "@apply shadow-[0_8px_0_0_hsl(var(--border))] hover:shadow-[0_4px_0_0_hsl(var(--border))] active:shadow-[0_0_0_0_hsl(var(--border))]",
   },
 };
 
@@ -34,6 +35,17 @@ export const TW_CONFIG = {
       },
     },
   },
+  ["marquee"]: {
+    animation: {
+      marquee: "marquee 40s linear infinite",
+    },
+    keyframes: {
+      marquee: {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(calc(-100% - 16px))" },
+      },
+    },
+  },
 };
 
 export const COMPONENTS = [
@@ -41,6 +53,7 @@ export const COMPONENTS = [
     name: "Shadow Button",
     slug: "shadow-button",
     child: ShadowButton,
+    cssConfig: CSS_CONFIG["shadow-button"],
   },
   {
     name: "Shining Badge",
@@ -70,15 +83,11 @@ export const COMPONENTS = [
     child: AvatarStatus,
   },
   {
-    name: "Modal",
-    slug: "modal",
-    child: ModalToggle,
-  },
-  {
     name: "Marquee",
     slug: "marquee",
     child: Marquee,
     gridClass: "medium-card",
+    twConfig: TW_CONFIG["marquee"],
   },
   {
     name: "Loading Bar",
@@ -94,6 +103,11 @@ export const COMPONENTS = [
     name: "Money Widget",
     slug: "money-widget",
     child: MoneyWidget,
+  },
+  {
+    name: "Digital Clock",
+    slug: "digital-clock",
+    child: DigitalClock,
   },
   {
     name: "Menu Bar",

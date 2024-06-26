@@ -21,7 +21,7 @@ const StackedAvatar = () => {
     <div className="flex items-center gap-x-2">
       <div className="flex items-center -space-x-4">
         {profiles.map((profile, index) => (
-          <Avatar key={index} className="relative cursor-pointer group/avatar hover:z-10 overflow-visible">
+          <Avatar key={index} className="relative cursor-pointer group/avatar shadow overflow-visible">
             <AvatarImage
               src={`https://github.com/${profile.username}.png`}
               alt="@shadcn"

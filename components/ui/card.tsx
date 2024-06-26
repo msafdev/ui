@@ -33,7 +33,9 @@ const Card = ({
         asChild
         className="absolute right-3 top-3 z-50 h-8 w-8 scale-0 transition-all duration-300 ease-in-out group-hover:scale-100"
       >
-        <Link href={`/components/${slug}`}>
+        <Link
+          href={`https://github.com/msafdev/ui/blob/main/components/lab/${slug}.tsx`}
+        >
           <MoveRight className="h-4 w-4" />
         </Link>
       </Button>

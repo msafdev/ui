@@ -84,20 +84,8 @@
     @apply sm:col-span-2 sm:row-span-2
   }
 
-  .transform-left {
-    transform-origin: top left;
-  }
-
   .inner-shadow-btn {
-    box-shadow: 0 8px 0 0 hsl(var(--border));
-  }
-
-  .inner-shadow-btn:hover {
-    box-shadow: 0 4px 0 0 hsl(var(--border));
-  }
-
-  .inner-shadow-btn:active {
-    box-shadow: 0 0 0 0 hsl(var(--border));
+    @apply shadow-[0_8px_0_0_hsl(var(--border))] hover:shadow-[0_4px_0_0_hsl(var(--border))] active:shadow-[0_0_0_0_hsl(var(--border))];
   }
 }
 
