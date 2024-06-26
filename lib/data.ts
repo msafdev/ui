@@ -12,6 +12,15 @@ import MoneyWidget from "@/components/lab/money-widget";
 import MenuBar from "@/components/lab/menu-bar";
 import DigitalClock from "@/components/lab/digital-clock";
 
+interface ComponentConfig {
+  name: string;
+  slug: string;
+  child: React.ComponentType<any>;
+  cssConfig?: object;
+  twConfig?: object;
+  gridClass?: string;
+}
+
 export const CSS_CONFIG = {
   ["shadow-button"]: {
     "inner-shadow-btn":
@@ -48,7 +57,7 @@ export const TW_CONFIG = {
   },
 };
 
-export const COMPONENTS = [
+export const COMPONENTS: ComponentConfig[] = [
   {
     name: "Shadow Button",
     slug: "shadow-button",
