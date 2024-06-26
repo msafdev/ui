@@ -23,19 +23,29 @@ export default function Home() {
           <span className="font-medium text-foreground">Tailwind CSS</span> and{" "}
           <span className="font-medium text-foreground">TypeScript</span>.
         </p>
-        <div className="mt-3 flex items-center gap-3 flex-wrap justify-center">
-          <Button variant="default" size="sm" className="font-medium font-mono">
-            Read the Docs
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
+          <Button variant="default" size="sm" className="font-mono font-medium">
+            <Link
+              href="https://github.com/msafdev/ui"
+              target="_blank"
+              className="flex items-center gap-x-2"
+            >
+              Read the Docs
+            </Link>
           </Button>
-          <Button variant="outline" size="sm" className="font-medium font-mono">
-            <Link href="https://trakteer.id/msafdev" className="flex items-center gap-x-2">
-            <Gem className="h-3 w-3" />
-            Donate on Trakteer
+          <Button variant="outline" size="sm" className="font-mono font-medium">
+            <Link
+              href="https://trakteer.id/msafdev"
+              target="_blank"
+              className="flex items-center gap-x-2"
+            >
+              <Gem className="h-3 w-3" />
+              Donate on Trakteer
             </Link>
           </Button>
         </div>
       </div>
-      <div className="mt-24 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense">
+      <div className="mt-24 grid w-full max-w-5xl grid-flow-dense grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {COMPONENTS.map((component, index) => (
           <Card
             key={index}
