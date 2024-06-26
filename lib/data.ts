@@ -83,16 +83,16 @@ export const COMPONENTS = [
     child: AvatarStatus,
   },
   {
+    name: "Loading Bar",
+    slug: "loading-bar",
+    child: LoadingBar,
+  },
+  {
     name: "Marquee",
     slug: "marquee",
     child: Marquee,
     gridClass: "medium-card",
     twConfig: TW_CONFIG["marquee"],
-  },
-  {
-    name: "Loading Bar",
-    slug: "loading-bar",
-    child: LoadingBar,
   },
   {
     name: "Curated Image",
