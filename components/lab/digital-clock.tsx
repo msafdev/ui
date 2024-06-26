@@ -21,7 +21,7 @@ const SevenSegment = ({ value = 0 }: { value?: number }) => {
 
   return (
     <div className="flex flex-col gap-y-1">
-      <div className="relative flex aspect-square h-auto w-6 flex-col">
+      <div className="relative flex aspect-square h-auto w-5 flex-col">
         <div
           className={`absolute -top-1 h-1 w-full rounded ${isActive("a") ? "bg-primary" : "bg-accent"}`}
         />
@@ -32,7 +32,7 @@ const SevenSegment = ({ value = 0 }: { value?: number }) => {
           className={`absolute -left-1 h-full w-1 rounded ${isActive("f") ? "bg-primary" : "bg-accent"}`}
         />
       </div>
-      <div className="relative flex aspect-square h-auto w-6 flex-col">
+      <div className="relative flex aspect-square h-auto w-5 flex-col">
         <div
           className={`absolute -top-1 h-1 w-full rounded ${isActive("g") ? "bg-primary" : "bg-accent"}`}
         />
@@ -70,10 +70,14 @@ const DigitalClock = () => {
   const formattedTime = formatTime(time);
 
   return (
-    <div className="flex flex-col gap-y-5">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-x-5 gap-y-5">
       <div className="flex items-center gap-x-5">
         <SevenSegment value={parseInt(formattedTime[0])} />
         <SevenSegment value={parseInt(formattedTime[1])} />
+      </div>
+      <div className="lg:flex hidden flex-col gap-y-1">
+        <div className="w-1 h-1 bg-primary animate-pulse" />
+        <div className="w-1 h-1 bg-primary animate-pulse" />
       </div>
       <div className="flex items-center gap-x-5">
         <SevenSegment value={parseInt(formattedTime[2])} />
