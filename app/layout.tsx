@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
-import { ThemeProvider } from "@/components/theme"
+import { ThemeProvider } from "@/components/theme";
 import "./globals.css";
 
 import Navbar from "@/components/main/navbar";
 import Footer from "@/components/main/footer";
+
+import { Toaster } from "@/components/ui/toaster";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -14,7 +16,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "ui.msaf",
-  description: "A starter kit for Next.js with Tailwind CSS and TypeScript, made with ❤️ by @msafdev.",
+  description:
+    "A starter kit for Next.js with Tailwind CSS and TypeScript, made with ❤️ by @msafdev.",
 };
 
 export default function RootLayout({
@@ -34,6 +37,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
