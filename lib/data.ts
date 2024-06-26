@@ -16,19 +16,15 @@ interface ComponentConfig {
   name: string;
   slug: string;
   child: React.ComponentType<any>;
-  cssConfig?: object;
   twConfig?: object;
   gridClass?: string;
 }
 
-export const CSS_CONFIG = {
-  ["shadow-button"]: {
-    "inner-shadow-btn":
-      "@apply shadow-[0_8px_0_0_hsl(var(--border))] hover:shadow-[0_4px_0_0_hsl(var(--border))] active:shadow-[0_0_0_0_hsl(var(--border))]",
-  },
+export type TWConfig = {
+  [key: string]: object;
 };
 
-export const TW_CONFIG = {
+export const TW_CONFIG: TWConfig = {
   ["background-shine"]: {
     animation: {
       "background-shine": "background-shine 2s infinite linear",
@@ -62,7 +58,6 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Shadow Button",
     slug: "shadow-button",
     child: ShadowButton,
-    cssConfig: CSS_CONFIG["shadow-button"],
   },
   {
     name: "Shining Badge",

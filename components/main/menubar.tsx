@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 
 import { Menu, Star } from "lucide-react";
 import { Button } from "../ui/button";
@@ -10,11 +9,19 @@ import { ModeToggle } from "../theme";
 const Menubar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   const className = isOpen ? "h-screen opacity-100" : "h-0 opacity-0";
 
   return (
     <>
-      <nav className="z-50 sm:hidden">
+      <nav className="z-[9999] sm:hidden">
         <Button
           onClick={() => setIsOpen(!isOpen)}
           variant={"secondary"}
@@ -25,7 +32,7 @@ const Menubar = () => {
         </Button>
       </nav>
       <div
-        className={`absolute left-0 top-0 flex w-screen flex-col items-center justify-center overflow-hidden bg-accent text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
+        className={`absolute left-0 top-0 z-[9998] flex w-screen flex-col items-center justify-center overflow-hidden bg-accent text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
       >
         <div className="flex flex-col gap-y-3">
           <ModeToggle variant="mobile" />

@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply flex min-h-[100svh] min-w-64 flex-col gap-y-32 bg-popover text-popover-foreground;
+    @apply flex min-h-[100svh] min-w-64 flex-col gap-y-8 sm:gap-y-16 md:gap-y-24 lg:gap-y-32 bg-popover text-popover-foreground;
   }
 }
 
@@ -82,10 +82,6 @@
 
   .medium-card {
     @apply sm:col-span-2 sm:row-span-2
-  }
-
-  .inner-shadow-btn {
-    @apply shadow-[0_8px_0_0_hsl(var(--border))] hover:shadow-[0_4px_0_0_hsl(var(--border))] active:shadow-[0_0_0_0_hsl(var(--border))];
   }
 }
 
