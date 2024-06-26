@@ -15,6 +15,16 @@ async function readFilePath(filePath: string) {
   return fileContent.trim();
 }
 
+export async function generateStaticParams() {
+  const componentSlugs = COMPONENTS.map((component) => ({
+    slug: component.slug,
+  }));
+
+  return componentSlugs;
+}
+
+export const dynamicParams = false;
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const currentComponentData = COMPONENTS.find(
     (component) => component.slug === params.slug,
