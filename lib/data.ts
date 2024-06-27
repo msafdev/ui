@@ -15,6 +15,8 @@ import DynamicIsland from "@/components/lab/dynamic-island";
 import TiltCard from "@/components/lab/tilt-card";
 import Dock from "@/components/lab/dock";
 import SwipeButton from "@/components/lab/swipe-button";
+import Timeline from "@/components/lab/timeline";
+import PulsingBadge from "@/components/lab/pulsing-badge";
 
 interface ComponentConfig {
   name: string;
@@ -141,6 +143,16 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Swipe Button",
     slug: "swipe-button",
     child: SwipeButton,
+  },
+  {
+    name: "Timeline",
+    slug: "timeline",
+    child: Timeline,
+  },
+  {
+    name: "Pulsing Badge",
+    slug: "pulsing-badge",
+    child: PulsingBadge
   },
   {
     name: "WIP",
