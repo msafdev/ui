@@ -1,4 +1,4 @@
-import { MoveRight } from "lucide-react";
+import { MoveRight, Share } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
 
@@ -27,16 +27,24 @@ const Card = ({
       <div className="absolute bottom-0 z-30 flex w-full items-center bg-gradient-to-b from-transparent to-accent px-3 pb-2 pt-12 text-accent-foreground">
         <p className="font-mono text-sm font-medium sm:text-base">{name}</p>
       </div>
-      <Button
-        variant="secondary"
-        size="icon"
-        asChild
-        className="absolute right-3 top-3 z-30 h-8 w-8 lg:scale-0 transition-all duration-300 ease-in-out lg:group-hover:scale-100"
-      >
-        <Link href={`/component/${slug}`} scroll={true}>
-          <MoveRight className="h-4 w-4" />
-        </Link>
-      </Button>
+      <div className="absolute right-3 top-3 z-30 flex gap-x-3 transition-all duration-300 ease-in-out lg:-translate-y-12 lg:scale-90 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:scale-100 lg:group-hover:opacity-100">
+        <Button variant="secondary" size="icon" asChild className="h-8 w-8">
+          <Link href={`/component/${slug}`} scroll={true}>
+            <MoveRight className="h-4 w-4" />
+          </Link>
+        </Button>
+        <Button variant="secondary" size="icon" asChild className="h-8 w-8">
+          <Link
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              name,
+            )}&url=https://ui.msaf.tech/lab/${slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Share className="h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
       {children}
     </div>
   );
