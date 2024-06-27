@@ -17,6 +17,7 @@ import Dock from "@/components/lab/dock";
 import SwipeButton from "@/components/lab/swipe-button";
 import Timeline from "@/components/lab/timeline";
 import PulsingBadge from "@/components/lab/pulsing-badge";
+import EncodedText from "@/components/lab/encoded-text";
 
 interface ComponentConfig {
   name: string;
@@ -152,7 +153,12 @@ export const COMPONENTS: ComponentConfig[] = [
   {
     name: "Pulsing Badge",
     slug: "pulsing-badge",
-    child: PulsingBadge
+    child: PulsingBadge,
+  },
+  {
+    name: "Encoded Text",
+    slug: "encoded-text",
+    child: EncodedText,
   },
   {
     name: "WIP",
