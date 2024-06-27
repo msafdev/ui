@@ -36,7 +36,7 @@ const Footer = () => {
       <p className="max-w-sm text-center text-xs text-muted-foreground md:text-sm">
         <code>Made with ❤️ by</code>{" "}
         <Link
-          href="/"
+          href="https://github.com/msafdev"
           target="_blank"
           className="font-medium text-foreground hover:underline"
         >
