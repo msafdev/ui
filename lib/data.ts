@@ -96,13 +96,6 @@ export const COMPONENTS: ComponentConfig[] = [
     child: LoadingBar,
   },
   {
-    name: "Marquee",
-    slug: "marquee",
-    child: Marquee,
-    gridClass: "medium-card",
-    twConfig: TW_CONFIG["marquee"],
-  },
-  {
     name: "Curated Image",
     slug: "curated-image",
     child: CuratedImage,
@@ -116,6 +109,13 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Digital Clock",
     slug: "digital-clock",
     child: DigitalClock,
+  },
+  {
+    name: "Marquee",
+    slug: "marquee",
+    child: Marquee,
+    gridClass: "medium-card",
+    twConfig: TW_CONFIG["marquee"],
   },
   {
     name: "Menu Bar",
