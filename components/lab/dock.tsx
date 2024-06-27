@@ -34,12 +34,12 @@ const Dock = () => {
           {activeTab === tab.id && (
             <motion.span
               layoutId="dock-bubble"
-              className="absolute inset-0 z-10 rounded-[12px] bg-primary/40 dark:bg-primary/80 mix-blend-difference outline-none ring-0"
+              className="absolute inset-0 z-10 rounded-[12px] bg-primary/40 mix-blend-difference outline-none ring-0 dark:bg-primary/80"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
           {tab.icon}
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 -translate-y-2 scale-75 rounded-md border bg-popover px-1.5 text-[10px] leading-none p-1 font-medium text-foreground opacity-0 transition-all duration-200 ease-in-out group-hover/dock:translate-y-0 group-hover/dock:scale-100 group-hover/dock:opacity-100">
+          <span className="absolute -top-8 left-1/2 hidden md:block -translate-x-1/2 -translate-y-2 scale-75 rounded-md border bg-popover p-1 px-1.5 text-[10px] font-medium leading-none text-foreground opacity-0 transition-all duration-200 ease-in-out group-hover/dock:translate-y-0 group-hover/dock:scale-100 group-hover/dock:opacity-100">
             {tab.label}
           </span>
         </button>
