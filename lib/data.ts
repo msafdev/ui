@@ -11,6 +11,7 @@ import WorkInProgress from "@/components/lab/work-in-progress";
 import MoneyWidget from "@/components/lab/money-widget";
 import MenuBar from "@/components/lab/menu-bar";
 import DigitalClock from "@/components/lab/digital-clock";
+import DynamicIsland from "@/components/lab/dynamic-island";
 
 interface ComponentConfig {
   name: string;
@@ -117,6 +118,11 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Menu Bar",
     slug: "menu-bar",
     child: MenuBar,
+  },
+  {
+    name: "Dynamic Island",
+    slug: "dynamic-island",
+    child: DynamicIsland,
   },
   {
     name: "WIP",

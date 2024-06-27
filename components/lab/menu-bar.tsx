@@ -20,7 +20,7 @@ const MenuBar = () => {
           onClick={() => setActiveTab(tab.id)}
           className={`${
             activeTab === tab.id ? "" : "hover:text-foreground/80"
-          } relative rounded-full px-3 py-1 text-sm font-medium text-foreground transition focus-visible:outline-2`}
+          } relative rounded-full px-2 py-0.5 md:px-3 md:py-1 text-sm md:font-medium text-foreground transition focus-visible:outline-2`}
           style={{
             WebkitTapHighlightColor: "transparent",
           }}

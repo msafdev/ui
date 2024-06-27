@@ -68,14 +68,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </div>
       {twConfig && (
         <div className="flex w-full max-w-3xl flex-col items-start gap-y-4">
-          <h3 className="w-full max-w-3xl text-left text-base font-medium md:text-lg">
+          <h3 className="w-full max-w-3xl text-left text-base font-semibold md:text-lg">
             Tailwind Config
           </h3>
           <Code code={twConfig} lang="json" />
         </div>
       )}
       <div className="flex w-full max-w-3xl flex-col items-start gap-y-4">
-        <h3 className="w-full max-w-3xl text-left text-base font-medium md:text-lg">
+        <h3 className="w-full max-w-3xl text-left text-base font-semibold md:text-lg">
           Code
         </h3>
         <Code code={code} lang="tsx" />

@@ -21,7 +21,7 @@ const Menubar = () => {
 
   return (
     <>
-      <nav className="z-[9999] sm:hidden">
+      <nav className="z-50 sm:hidden">
         <Button
           onClick={() => setIsOpen(!isOpen)}
           variant={"secondary"}
@@ -32,7 +32,7 @@ const Menubar = () => {
         </Button>
       </nav>
       <div
-        className={`absolute left-0 top-0 z-[9998] flex w-screen flex-col items-center justify-center overflow-hidden bg-accent text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
+        className={`absolute left-0 top-0 z-40 flex w-screen flex-col items-center justify-center overflow-hidden bg-popover/80 backdrop-blur-sm text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
       >
         <div className="flex flex-col gap-y-3">
           <ModeToggle variant="mobile" />
