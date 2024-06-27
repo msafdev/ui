@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, MouseEvent, useCallback } from "react";
+import { useState, MouseEvent, useCallback, useRef } from "react";
 
 function throttle<T extends (...args: any[]) => any>(
   func: T,
@@ -19,6 +19,10 @@ function throttle<T extends (...args: any[]) => any>(
 
 const TiltCard = () => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const [opacity, setOpacity] = useState(0);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const divRef = useRef<HTMLDivElement>(null);
 
   const onMouseMove = useCallback(
     throttle((e: MouseEvent<HTMLDivElement>) => {
@@ -32,24 +36,39 @@ const TiltCard = () => {
       const rotateY = (centerX - x) / 4;
 
       setRotate({ x: rotateX, y: rotateY });
+      setPosition({ x, y });
     }, 100),
     [],
   );
 
   const onMouseLeave = useCallback(() => {
     setRotate({ x: 0, y: 0 });
+    setOpacity(0);
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    setOpacity(0.1);
   }, []);
 
   return (
     <div
+      ref={divRef}
       className="card relative aspect-square h-auto w-1/2 transition-all duration-200 ease-in-out will-change-transform"
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
+      onMouseEnter={handleMouseEnter}
       style={{
         transform: `perspective(1000px) rotateX(${-rotate.x}deg) rotateY(${-rotate.y}deg) scale3d(1, 1, 1)`,
       }}
     >
-      <div className="border bg-gradient-to-tr group relative flex h-full w-full select-none items-center justify-center rounded-lg from-popover to-accent">
+      <div className="group relative flex h-full w-full select-none items-center justify-center rounded-lg border bg-gradient-to-tr from-popover to-accent">
+        <div
+          className="pointer-events-none absolute -inset-px opacity-0 transition duration-200"
+          style={{
+            opacity,
+            background: `radial-gradient(360px circle at ${position.x}px ${position.y}px, hsla(var(--primary)), transparent 40%)`,
+          }}
+        />
         <code className="text-md inline-block bg-gradient-to-br from-foreground to-primary bg-clip-text font-medium text-transparent">
           Hover me
         </code>
