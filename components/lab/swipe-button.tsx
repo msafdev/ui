@@ -75,6 +75,7 @@ const SwipeButton = () => {
       variants={buttonVariants}
       initial="closed"
       whileHover="open"
+      whileTap="open"
       className="relative h-[40px] min-w-[162px] rounded-[10px] bg-popover shadow-[0_0_0_1px_hsl(var(--border))]"
     >
       <motion.div
