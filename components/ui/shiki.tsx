@@ -10,7 +10,7 @@ export type CodeProps = {
 export default async function Shiki({
   code,
   lang = "javascript",
-  theme = "poimandres",
+  theme = "github-dark",
 }: CodeProps) {
   const html = await codeToHtml(code, {
     lang,

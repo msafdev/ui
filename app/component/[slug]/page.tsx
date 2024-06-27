@@ -1,9 +1,9 @@
-import Code from "@/components/ui/code";
-import { COMPONENTS } from "@/lib/data";
-
 import fs from "fs";
 import path from "path";
 import { promisify } from "util";
+
+import Code from "@/components/ui/code";
+import { COMPONENTS } from "@/lib/data";
 
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
@@ -26,6 +26,7 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 export default async function Page({ params }: { params: { slug: string } }) {
+
   const currentComponentData = COMPONENTS.find(
     (component) => component.slug === params.slug,
   );
