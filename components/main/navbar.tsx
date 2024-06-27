@@ -15,10 +15,16 @@ const Navbar = () => {
 
       <div className="hidden items-center gap-x-2 sm:flex">
         <ModeToggle variant="desktop" />
-        <Button variant={"default"} className="gap-x-2.5" size={"sm"}>
-          <Star className="h-4 w-4" />
-          Github
-        </Button>
+        <Button variant={"default"} className="" size={"sm"} asChild>
+            <Link
+              className="inline-flex gap-x-2"
+              href={"https://github.com/msafdev/ui"}
+              target="_blank"
+            >
+              <Star className="h-4 w-4" />
+              Star on Github
+            </Link>
+          </Button>
       </div>
 
       <Menubar />

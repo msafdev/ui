@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, Star } from "lucide-react";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../theme";
+import Link from "next/link";
 
 const Menubar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,13 +33,19 @@ const Menubar = () => {
         </Button>
       </nav>
       <div
-        className={`absolute left-0 top-0 z-40 flex w-screen flex-col items-center justify-center overflow-hidden bg-popover/80 backdrop-blur-sm text-accent-foreground transition-all duration-300 ease-in-out sm:hidden ${className}`}
+        className={`absolute left-0 top-0 z-40 flex w-screen flex-col items-center justify-center overflow-hidden bg-popover/80 text-accent-foreground backdrop-blur-sm transition-all duration-300 ease-in-out sm:hidden ${className}`}
       >
         <div className="flex flex-col gap-y-3">
           <ModeToggle variant="mobile" />
-          <Button variant={"default"} className="gap-x-3" size={"sm"}>
-            <Star className="h-4 w-4" />
-            Github
+          <Button variant={"default"} className="gap-x-3" size={"sm"} asChild>
+            <Link
+              className="inline-flex gap-x-3"
+              href={"https://github.com/msafdev/ui"}
+              target="_blank"
+            >
+              <Star className="h-4 w-4" />
+              Star on Github
+            </Link>
           </Button>
         </div>
       </div>
