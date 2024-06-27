@@ -59,12 +59,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <section className="pad-x flex h-auto w-full grow flex-col items-center justify-center gap-y-12 md:gap-y-16">
-      <div className="flex w-full max-w-3xl flex-col items-start gap-y-4">
+      <div className="flex w-full max-w-2xl flex-col items-start gap-y-4">
         <h1 className="text-left text-lg font-semibold md:text-xl">
           {currentComponentData?.name}
         </h1>
         <div
-          className={`relative flex w-full max-w-3xl p-4 items-center justify-center overflow-hidden rounded-lg border ${size[currentComponentData.gridClass ?? "regular-card"]}`}
+          className={`relative flex w-full max-w-2xl p-4 items-center justify-center overflow-hidden rounded-lg border ${size[currentComponentData.gridClass ?? "regular-card"]}`}
         >
           <currentComponentData.child />
 
@@ -74,15 +74,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
       </div>
       {twConfig && (
-        <div className="flex w-full max-w-3xl flex-col items-start gap-y-4">
-          <h3 className="w-full max-w-3xl text-left text-base font-semibold md:text-lg">
+        <div className="flex w-full max-w-2xl flex-col items-start gap-y-4">
+          <h3 className="w-full max-w-2xl text-left text-base font-semibold md:text-lg">
             Tailwind Config
           </h3>
           <Code code={twConfig} lang="json" />
         </div>
       )}
-      <div className="flex w-full max-w-3xl flex-col items-start gap-y-4">
-        <h3 className="w-full max-w-3xl text-left text-base font-semibold md:text-lg">
+      <div className="flex w-full max-w-2xl flex-col items-start gap-y-4">
+        <h3 className="w-full max-w-2xl text-left text-base font-semibold md:text-lg">
           Code
         </h3>
         <Code code={code} lang="tsx" />
