@@ -14,6 +14,7 @@ import DigitalClock from "@/components/lab/digital-clock";
 import DynamicIsland from "@/components/lab/dynamic-island";
 import TiltCard from "@/components/lab/tilt-card";
 import Dock from "@/components/lab/dock";
+import SwipeButton from "@/components/lab/swipe-button";
 
 interface ComponentConfig {
   name: string;
@@ -135,6 +136,11 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Dock",
     slug: "dock",
     child: Dock,
+  },
+  {
+    name: "Swipe Button",
+    slug: "swipe-button",
+    child: SwipeButton,
   },
   {
     name: "WIP",
