@@ -4,12 +4,11 @@ import CopyButton from "./copy-button";
 import Shiki, { CodeProps } from "./shiki";
 
 const Code: React.FC<CodeProps> = ({ code, lang, theme }) => {
-
   return (
     <div className="relative h-fit w-full max-w-3xl overflow-hidden rounded-lg bg-[#24292E]">
       <Suspense
         fallback={
-          <div className="aspect-square h-auto w-full animate-pulse rounded-lg bg-[#24292E]" />
+          <div className="h-[212px] w-full animate-pulse rounded-lg bg-[#24292E]" />
         }
       >
         <Shiki code={code} lang={lang} />
