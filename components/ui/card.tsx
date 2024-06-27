@@ -37,7 +37,7 @@ const Card = ({
           <Link
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               name,
-            )}&url=https://ui.msaf.tech/lab/${slug}`}
+            )}&url=https://ui.msaf.tech/component/${slug}`}
             target="_blank"
             rel="noopener noreferrer"
           >
