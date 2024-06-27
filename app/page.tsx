@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="pad-x flex h-auto w-full grow flex-col items-center justify-center">
+    <section className="pad-x flex h-auto w-full grow flex-col items-center justify-center">
       <div className="flex max-w-xl flex-col items-center gap-y-5">
         <Badge />
         <h1 className="inline-block text-balance bg-gradient-to-br from-foreground via-foreground to-purple-500 bg-clip-text text-center text-xl font-bold text-transparent md:text-3xl">
@@ -57,6 +57,6 @@ export default function Home() {
           </Card>
         ))}
       </div>
-    </main>
+    </section>
   );
 }

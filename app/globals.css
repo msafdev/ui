@@ -71,17 +71,17 @@
     @apply border-border;
   }
   body {
-    @apply flex min-h-[100svh] min-w-64 flex-col gap-y-8 sm:gap-y-16 md:gap-y-24 lg:gap-y-32 bg-popover text-popover-foreground;
+    @apply bg-popover text-popover-foreground;
   }
 }
 
 @layer components {
   .pad-x {
-    @apply px-6 sm:px-8 md:px-10 lg:px-12;
+    @apply px-4 sm:px-6 md:px-8 lg:px-10;
   }
 
   .medium-card {
-    @apply sm:col-span-2 sm:row-span-2
+    @apply sm:col-span-2 sm:row-span-2;
   }
 }
 

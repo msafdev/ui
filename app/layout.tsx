@@ -7,6 +7,8 @@ import "./globals.css";
 import Navbar from "@/components/main/navbar";
 import Footer from "@/components/main/footer";
 
+import NotFound from "./not-found";
+
 import { Toaster } from "@/components/ui/toaster";
 
 const manrope = Manrope({
@@ -34,9 +36,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <main className="flex flex-col min-h-[100svh] w-ull min-w-60 overflow-x-hidden gap-y-8 sm:gap-y-16 md:gap-y-24 lg:gap-y-32">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
           <Toaster />
         </ThemeProvider>
       </body>

@@ -31,7 +31,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 
   if (!currentComponentData) {
-    return <h1>Component not found</h1>;
+    return (
+      <section className="pad-x flex h-auto w-full grow flex-col items-center justify-center">
+        <h1 className="text-center text-xl font-semibold text-accent-foreground">
+          Component Not Found
+        </h1>
+      </section>
+    );
   }
 
   const filePath = `./components/lab/${currentComponentData?.slug.replace(/\s+/g, "")}.tsx`;
