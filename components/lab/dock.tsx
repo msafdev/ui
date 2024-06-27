@@ -33,7 +33,7 @@ const Dock = () => {
         >
           {activeTab === tab.id && (
             <motion.span
-              layoutId="bubble"
+              layoutId="dock-bubble"
               className="absolute inset-0 z-10 rounded-[8px] bg-primary/40 dark:bg-primary/80 mix-blend-difference outline-none ring-0"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
