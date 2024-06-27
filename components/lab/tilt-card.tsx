@@ -53,7 +53,7 @@ const TiltCard = () => {
   return (
     <div
       ref={divRef}
-      className="card relative aspect-square h-auto w-1/2 transition-all duration-200 ease-in-out will-change-transform"
+      className="card relative aspect-square h-auto w-1/2 max-w-36 min-w-28 transition-all duration-200 ease-in-out will-change-transform"
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       onMouseEnter={handleMouseEnter}
