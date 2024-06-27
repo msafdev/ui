@@ -52,8 +52,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const twConfig = JSON.stringify(currentComponentData?.twConfig, null, 2);
 
   const size: { [key: string]: string } = {
-    "regular-card": "aspect-[3/1]",
-    "medium-card": "aspect-square md:aspect-video",
+    "regular-card": "aspect-[1/1] xs:aspect-[2/1]",
+    "medium-card": "aspect-[2/3] xs:aspect-[1/1] md:aspect-video",
     "last-card": "aspect-video",
   };
 
@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           {currentComponentData?.name}
         </h1>
         <div
-          className={`relative flex w-full max-w-3xl items-center justify-center overflow-hidden rounded-lg border ${size[currentComponentData.gridClass ?? "regular-card"]}`}
+          className={`relative flex w-full max-w-3xl p-4 items-center justify-center overflow-hidden rounded-lg border ${size[currentComponentData.gridClass ?? "regular-card"]}`}
         >
           <currentComponentData.child />
 

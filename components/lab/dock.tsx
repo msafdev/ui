@@ -19,14 +19,14 @@ const Dock = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex rounded-xl border bg-popover p-1">
+    <div className="flex rounded-2xl border bg-popover p-1">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}
           className={`${
             activeTab === tab.id ? "text-foreground" : "text-muted-foreground"
-          } group/dock relative h-8 w-8 p-2 text-sm transition-all duration-500 ease-in-out focus-visible:outline-none`}
+          } group/dock relative h-9 w-9 p-2.5 text-sm transition-all duration-500 ease-in-out focus-visible:outline-none`}
           style={{
             WebkitTapHighlightColor: "transparent",
           }}
@@ -34,7 +34,7 @@ const Dock = () => {
           {activeTab === tab.id && (
             <motion.span
               layoutId="dock-bubble"
-              className="absolute inset-0 z-10 rounded-[8px] bg-primary/40 dark:bg-primary/80 mix-blend-difference outline-none ring-0"
+              className="absolute inset-0 z-10 rounded-[12px] bg-primary/40 dark:bg-primary/80 mix-blend-difference outline-none ring-0"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
