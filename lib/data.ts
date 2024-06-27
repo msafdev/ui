@@ -12,6 +12,8 @@ import MoneyWidget from "@/components/lab/money-widget";
 import MenuBar from "@/components/lab/menu-bar";
 import DigitalClock from "@/components/lab/digital-clock";
 import DynamicIsland from "@/components/lab/dynamic-island";
+import TiltCard from "@/components/lab/tilt-card";
+import Dock from "@/components/lab/dock";
 
 interface ComponentConfig {
   name: string;
@@ -123,6 +125,16 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Dynamic Island",
     slug: "dynamic-island",
     child: DynamicIsland,
+  },
+  {
+    name: "Tilt Card",
+    slug: "tilt-card",
+    child: TiltCard,
+  },
+  {
+    name: "Dock",
+    slug: "dock",
+    child: Dock,
   },
   {
     name: "WIP",
