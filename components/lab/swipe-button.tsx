@@ -3,9 +3,17 @@
 import { easeIn, easeOut, motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-const SwipeButton = () => {
-  const duration = 0.5;
+interface SwipeButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+  duration?: number;
+}
 
+const SwipeButton = ({
+  className,
+  children = "Book a demo",
+  duration = 0.5,
+}: SwipeButtonProps) => {
   const sliderVariants = {
     open: {
       width: "158px",
@@ -76,7 +84,7 @@ const SwipeButton = () => {
       initial="closed"
       whileHover="open"
       whileTap="open"
-      className="relative h-[40px] min-w-[162px] rounded-[10px] bg-popover shadow-[0_0_0_1px_hsl(var(--border))]"
+      className={`relative h-[40px] min-w-[162px] rounded-[10px] bg-popover shadow-[0_0_0_1px_hsl(var(--border))] ${className}`}
     >
       <motion.div
         variants={sliderVariants}
@@ -94,7 +102,7 @@ const SwipeButton = () => {
         variants={textVariants}
         className="translate-x-5 text-xs font-medium text-popover-foreground"
       >
-        Book a demo
+        {children}
       </motion.div>
     </motion.button>
   );

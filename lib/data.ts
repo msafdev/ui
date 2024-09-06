@@ -4,7 +4,6 @@ import LoadingCircle from "@/components/lab/loading-circle";
 import Marquee from "@/components/lab/marquee";
 import ShadowButton from "@/components/lab/shadow-button";
 import ShiningBadge from "@/components/lab/shining-badge";
-import StackedAvatar from "@/components/lab/stacked-avatar";
 import Tooltip from "@/components/lab/tooltip";
 import CuratedImage from "@/components/lab/curated-image";
 import WorkInProgress from "@/components/lab/work-in-progress";
@@ -18,6 +17,7 @@ import SwipeButton from "@/components/lab/swipe-button";
 import PulsingBadge from "@/components/lab/pulsing-badge";
 import EncodedText from "@/components/lab/encoded-text";
 import MusicCard from "@/components/lab/music-card";
+import CyberpunkButton from "@/components/lab/cyberpunk-button";
 
 interface ComponentConfig {
   name: string;
@@ -67,15 +67,20 @@ export const COMPONENTS: ComponentConfig[] = [
     child: ShadowButton,
   },
   {
+    name: "Swipe Button",
+    slug: "swipe-button",
+    child: SwipeButton,
+  },
+  {
+    name: "Cyberpunk Button",
+    slug: "cyberpunk-button",
+    child: CyberpunkButton,
+  },
+  {
     name: "Shining Badge",
     slug: "shining-badge",
     child: ShiningBadge,
     twConfig: TW_CONFIG["background-shine"],
-  },
-  {
-    name: "Stacked Avatar",
-    slug: "stacked-avatar",
-    child: StackedAvatar,
   },
   {
     name: "Tooltip",
@@ -139,11 +144,6 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Dock",
     slug: "dock",
     child: Dock,
-  },
-  {
-    name: "Swipe Button",
-    slug: "swipe-button",
-    child: SwipeButton,
   },
   {
     name: "Pulsing Badge",
