@@ -15,9 +15,9 @@ import DynamicIsland from "@/components/lab/dynamic-island";
 import TiltCard from "@/components/lab/tilt-card";
 import Dock from "@/components/lab/dock";
 import SwipeButton from "@/components/lab/swipe-button";
-import Timeline from "@/components/lab/timeline";
 import PulsingBadge from "@/components/lab/pulsing-badge";
 import EncodedText from "@/components/lab/encoded-text";
+import MusicCard from "@/components/lab/music-card";
 
 interface ComponentConfig {
   name: string;
@@ -146,11 +146,6 @@ export const COMPONENTS: ComponentConfig[] = [
     child: SwipeButton,
   },
   {
-    name: "Timeline",
-    slug: "timeline",
-    child: Timeline,
-  },
-  {
     name: "Pulsing Badge",
     slug: "pulsing-badge",
     child: PulsingBadge,
@@ -159,6 +154,11 @@ export const COMPONENTS: ComponentConfig[] = [
     name: "Encoded Text",
     slug: "encoded-text",
     child: EncodedText,
+  },
+  {
+    name: "Music Card",
+    slug: "music-card",
+    child: MusicCard,
   },
   {
     name: "WIP",
